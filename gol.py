@@ -14,6 +14,7 @@ class GOL:
     def game(self):
         self.createDeadCells()
         while True:
+            pygame.time.Clock().tick(60)
             self.screen.fill((255,255,255))
             for event in pygame.event.get():
                 if event.type == pygame.QUIT or event.type == pygame.KEYDOWN and event.key == pygame.K_ESCAPE:
